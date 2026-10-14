@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.jsx';
+
+@theme {
+    --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Fraunces", ui-serif, Georgia, serif;
+    --color-paper: #f3efe6;
+    --color-ink: #1c1915;
+    --color-muted: #6d655c;
+    --color-line: #e3dacd;
+    --color-card: #fffdf8;
+    --color-pine: #1e4d3a;
+    --color-pine-deep: #143528;
+    --color-mist: #e7f0ea;
+    --color-amber: #8a4b12;
+    --color-amber-soft: #f8ead7;
+    --color-clay: #8c2f2f;
+    --color-clay-soft: #f8e4e1;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-sans);
+        background: var(--color-paper);
+        color: var(--color-ink);
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled),
+    a,
+    summary {
+        cursor: pointer;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-pine);
+        outline-offset: 2px;
+    }
+
+    .font-display {
+        font-weight: 560;
+    }
+}
